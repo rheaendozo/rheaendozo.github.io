@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Lost in Space</title>
+    <link rel="icon" href="https://i.imgur.com/OJQvFkI.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #0f1422;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden; 
+            position: relative; 
+        }
+    
+       
+        .star {
+            position: absolute;
+            background-color: transparent;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            box-shadow:
+                100px 500px #fff, 200px 300px #fff, 300px 900px #fff, 400px 200px #fff, 500px 700px #fff, 
+                600px 100px #fff, 700px 800px #fff, 800px 400px #fff, 900px 600px #fff, 1000px 50px #fff,
+                1100px 500px #fff, 1200px 300px #fff, 1300px 900px #fff, 1400px 200px #fff, 1500px 700px #fff,
+                200px 700px #fff, 300px 400px #fff, 400px 100px #fff, 500px 600px #fff, 
+                600px 300px #fff, 700px 800px #fff, 800px 200px #fff, 900px 900px #fff, 1000px 50px #fff,
+                1100px 500px #fff, 1200px 700px #fff, 1300px 300px #fff, 1400px 600px #fff, 1500px 900px #fff,
+                300px 800px #fff, 400px 200px #fff, 500px 500px #fff, 
+                600px 100px #fff, 700px 700px #fff, 800px 300px #fff, 900px 900px #fff, 1000px 50px #fff,
+                1100px 600px #fff, 1200px 400px #fff, 1300px 800px #fff, 1400px 300px #fff, 1500px 700px #fff;
+            animation: animateStars 50s linear infinite;
+        }
+    
+        @keyframes animateStars {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-1200px); 
+            }
+        }
+    
+        
+        .asteroid {
+            position: absolute;
+            background-color: #615f5f;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            box-shadow:
+                200px 400px #615f5f, 400px 200px #615f5f, 600px 600px #615f5f,
+                800px 300px #615f5f, 1000px 700px #615f5f, 1200px 500px #615f5f,
+                1400px 800px #615f5f, 1600px 100px #615f5f, 1800px 600px #615f5f,
+                2000px 300px #615f5f, 2200px 900px #615f5f, 2400px 200px #615f5f,
+                2600px 700px #615f5f, 2800px 400px #615f5f, 3000px 800px #615f5f,
+                3200px 100px #615f5f, 3400px 600px #615f5f, 3600px 300px #615f5f,
+                3800px 900px #615f5f, 4000px 200px #615f5f;
+            animation: animateAsteroids 60s linear infinite;
+        }
+    
+        @keyframes animateAsteroids {
+            from {
+                transform: translateY(0) rotate(0deg);
+            }
+            to {
+                transform: translateY(-1200px) rotate(360deg);
+            }
+        }
+    
+        .nav {
+            display: flex; 
+            align-items: center;
+            padding: 10px 30px;
+            background-color: #0f1422; 
+            position: relative; 
+            z-index: 1; 
+        }
+        .nav a {
+            color: #fff; 
+            text-decoration: none; 
+            margin: 0 30px;
+            font-weight: bold; 
+            font-size: 16px;
+            position: relative; 
+            transition: all 0.3s ease;
+        }
+        .nav a:hover {
+        color: #fff;
+        border-bottom: 2px solid #fff; 
+    }
+        .nav img {
+            width: 100px; 
+            margin-right: auto; 
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-between; 
+            max-width: 1000px; 
+            margin: 50px auto; 
+            text-align: center; 
+            overflow: hidden; 
+            align-items: center;
+            position: relative; 
+            z-index: 1;
+        }
+    
+       
+        .astro {
+            position: relative; 
+            animation: floatAstronaut 5s ease-in-out infinite alternate;
+        }
+    
+        @keyframes floatAstronaut {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-14px); 
+            }
+        }
+    
+        .astro img {
+            width: 100%; 
+            max-width: 400px;  
+        }
+    
+        .container img {
+            flex: 1;
+            width: 100%; 
+            max-width: 400px; 
+        }
+    
+        .container p {
+            margin-bottom: 20px;
+            font-weight: bold; 
+            font-size: 16px;
+        }
+    
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+        }
+    
+        .btn:hover {
+            background-color: #3d6940;
+        }
+        @media (max-width: 768px) {
+            
+    .nav {
+        padding: 10px 15px;
+    }
+
+    .nav img {
+        width: 60px;
+        margin-right: 5px;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+
+    .container {
+        margin: 20px 5px;
+    }
+
+    .astro img,
+    .container img {
+        max-width: 250px;
+    }
+
+    .container p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 16px;
+        margin-top: 8px;
+    }
+}
+
+    </style>
+    
+</head>
+<body>
+    <div class="nav">
+        <img src="https://i.imgur.com/OJQvFkI.png" alt="Logo">
+        <a href="#">Blog</a>
+        <a href="#">Galaxy</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="container">
+        <div class="astro">
+            <img src="https://i.imgur.com/FuYYrcL.png" alt="Astronaut">
+        </div>
+        <div>
+            <img src="https://i.imgur.com/zrxF6wJ.png" alt="Space">
+            <p>Whoops! It looks like you lost in space.</p>
+            <a href="#" class="btn">Go Home</a>
+        </div>
+    </div>
+    <div class="star"></div>
+
+    <div class="asteroid"></div>
+
+</body>
+</html>
