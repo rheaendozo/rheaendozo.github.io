@@ -83,4 +83,7 @@ img {
         width: auto; 
         
     }
+    img {
+        width: 100%; 
+    }
 }
