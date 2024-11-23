@@ -108,6 +108,10 @@
         .content-section {
             padding: 60px 0;/
         }
+        .form-control.no-shadow {
+        box-shadow: none; 
+        border: 1px solid #ced4da;
+    }
     </style>
 </head>
 
@@ -129,7 +133,7 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                        <a class="nav-link" href="#portfolio">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -245,6 +249,46 @@
                     </div>
                 </div>
             </div>
+            <div class="container my-5" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10 col-sm-12 mb-4">
+                        <h3 class="text-center mb-4" style="color: #330660;">
+                            Listen to My Playlist
+                        </h3>
+                        <h6 class="text-center mb-4" style="line-height: 1.6; color: #333;">
+                            Welcome to my playlist! Music is an integral part of my life, reflecting my moods,
+                            experiences, and inspirations. Here are some of my favorite tracks that I love to listen to
+                            and share with you.
+                        </h6>
+                        <div class="card shadow-lg border-0" style="border-radius: 15px; overflow: hidden;">
+                            <div style="padding: 10px;">
+                                <iframe style="border-radius: 15px; width: 100%; height: 352px;"
+                                    src="https://open.spotify.com/embed/track/6dlW7m78wKau9ZRqPLAUJA?utm_source=generator"
+                                    frameborder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                            <div class="row justify-content-center" style="padding: 10px;">
+                                <div class="col-12 col-md-6 mb-2 d-flex justify-content-center">
+                                    <iframe style="border-radius: 12px; width: 100%;"
+                                        src="https://open.spotify.com/embed/track/52F5Y4EgcZ2RggVqpqSJBe?utm_source=generator"
+                                        height="152" frameborder="0" allowfullscreen=""
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                        loading="lazy"></iframe>
+                                </div>
+                                <div class="col-12 col-md-6 mb-2 d-flex justify-content-center">
+                                    <iframe style="border-radius: 12px; width: 100%;"
+                                        src="https://open.spotify.com/embed/track/4ztvNcm17Ol4yhhUElRIBs?utm_source=generator"
+                                        height="152" frameborder="0" allowfullscreen=""
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                        loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
             <div id="portfolio" class="content-section active">
                 <div class="container">
                     <h2 class="text-center" style="color: #330660; margin-bottom: 30px;">Projects</h2>
@@ -321,38 +365,24 @@
         <div id="contact" class="content-section active">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-6 col-12 text-center">
+                    <div class="col-lg-8 col-12 text-center">
                         <div class="card-background">
                             <h2 class="text-center" style="color: #ffffff; margin-bottom: 30px;">Contact Me</h2>
                             <form>
-                                <div class="mb-3">
+                                <div class="mb-3" style="box-shadow: none;">
                                     <label for="name" class="form-label" style="color: #ffffff;">Name</label>
-                                    <input type="text" class="form-control" id="name" required>
+                                    <input type="text" class="form-control no-shadow" id="name" required>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3" style="box-shadow: none;">
                                     <label for="email" class="form-label" style="color: #ffffff;">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
+                                    <input type="email" class="form-control no-shadow" id="email" required>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3" style="box-shadow: none;">
                                     <label for="message" class="form-label" style="color: #ffffff;">Message</label>
-                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                    <textarea class="form-control no-shadow" id="message" rows="4" required></textarea>
                                 </div>
                                 <button type="submit" class="send-button">Send Message</button>
-                            </form>
-                            <div class="social-icons">
-                                <a href="https://facebook.com" target="_blank" class="social-icon">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="https://instagram.com" target="_blank" class="social-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://twitter.com" target="_blank" class="social-icon">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="https://youtube.com" target="_blank" class="social-icon">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </div>
+                            </form>                            
                         </div>
                     </div>
                 </div>
