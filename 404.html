@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Not Found</title>
+    <link rel="icon" href="A03/rhea.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #5d2f88; /* Background color */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1000px;
+            background-color: rgba(93, 47, 136, 0.9);
+            border-radius: 15px;
+            
+        }
+
+        .left-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .error-code {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 200px;
+            font-weight: bold;
+            margin: 0;
+            color: #fff;
+        }
+
+        .error-message {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #fff;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .btn-custom {
+            background-color: rgb(178, 88, 190);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #330660;
+            transform: scale(1.05);
+        }
+
+        .right-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .error-code {
+                font-size: 100px;
+            }
+
+            .btn-custom {
+                font-size: 1.1rem;
+                padding: 10px 20px;
+            }
+
+            .right-content img {
+                max-width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content-wrapper">
+        <div class="left-content">
+            <div class="error-code">404</div>
+            <div class="error-message">Oops! The page you're looking for cannot be found.</div>
+            <div class="button-container">
+                <button class="btn-custom" onclick="window.location.href='index.html'">Go to Homepage</button>
+            </div>
+        </div>
+        <div class="right-content">
+            <img src="A03/confuse.png" alt="Confused Image">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
