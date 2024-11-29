@@ -108,10 +108,11 @@
         .content-section {
             padding: 60px 0;/
         }
+
         .form-control.no-shadow {
-        box-shadow: none; 
-        border: 1px solid #ced4da;
-    }
+            box-shadow: none;
+            border: 1px solid #ced4da;
+        }
     </style>
 </head>
 
@@ -262,7 +263,7 @@
                         </h6>
                         <div class="card shadow-lg border-0" style="border-radius: 15px; overflow: hidden;">
                             <div style="padding: 10px;">
-                                <iframe style="border-radius: 15px; width: 100%; height: 352px;"
+                                <iframe id="track1" style="border-radius: 15px; width: 100%; height: 352px;"
                                     src="https://open.spotify.com/embed/track/6dlW7m78wKau9ZRqPLAUJA?utm_source=generator"
                                     frameborder="0" allowfullscreen=""
                                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -270,14 +271,14 @@
                             </div>
                             <div class="row justify-content-center" style="padding: 10px;">
                                 <div class="col-12 col-md-6 mb-2 d-flex justify-content-center">
-                                    <iframe style="border-radius: 12px; width: 100%;"
+                                    <iframe id="track2" style="border-radius: 12px; width: 100%;"
                                         src="https://open.spotify.com/embed/track/52F5Y4EgcZ2RggVqpqSJBe?utm_source=generator"
                                         height="152" frameborder="0" allowfullscreen=""
                                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                                         loading="lazy"></iframe>
                                 </div>
                                 <div class="col-12 col-md-6 mb-2 d-flex justify-content-center">
-                                    <iframe style="border-radius: 12px; width: 100%;"
+                                    <iframe id="track3" style="border-radius: 12px; width: 100%;"
                                         src="https://open.spotify.com/embed/track/4ztvNcm17Ol4yhhUElRIBs?utm_source=generator"
                                         height="152" frameborder="0" allowfullscreen=""
                                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -286,7 +287,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <div id="portfolio" class="content-section active">
@@ -382,7 +383,7 @@
                                     <textarea class="form-control no-shadow" id="message" rows="4" required></textarea>
                                 </div>
                                 <button type="submit" class="send-button">Send Message</button>
-                            </form>                            
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -413,6 +414,40 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        const track1 = document.getElementById('track1');
+        const track2 = document.getElementById('track2');
+        const track3 = document.getElementById('track3');
+
+        function stopAllTracks() {
+            track1.src = track1.src;
+            track2.src = track2.src;
+            track3.src = track3.src;
+        }
+
+        function playTrack(trackId) {
+            stopAllTracks();  
+
+            if (trackId === 'track1') {
+                track1.src = "https://open.spotify.com/embed/track/6dlW7m78wKau9ZRqPLAUJA?utm_source=generator";
+            } else if (trackId === 'track2') {
+                track2.src = "https://open.spotify.com/embed/track/52F5Y4EgcZ2RggVqpqSJBe?utm_source=generator";
+            } else if (trackId === 'track3') {
+                track3.src = "https://open.spotify.com/embed/track/4ztvNcm17Ol4yhhUElRIBs?utm_source=generator";
+            }
+        }
+
+        track1.addEventListener('click', function () {
+            playTrack('track1');
+        });
+
+        track2.addEventListener('click', function () {
+            playTrack('track2');
+        });
+
+        track3.addEventListener('click', function () {
+            playTrack('track3');
         });
     </script>
 </body>
